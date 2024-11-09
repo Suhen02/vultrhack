@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Medical Access</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHnR4IqRsUOLPjMOkcXon5T6ozTveFKrI"></script>
+
+</head>
+<body>
+    {{>header}}
+
+    <h1> Find Medical Professionals and Medicines</h1>
+    <form id="cityForm" action="/submit" method="post">
+        <label for="yname">Enter your name:</label>
+        <input type="text" id="yname" name="yname" autocomplete="off" placeholder="enter name" required>
+        <label for="phone" >Enter your phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="enter your ph" autocomplete="off">
+        <label for="city">Select City:</label>
+        <select id="city" name="city" autocomplete="off" required>
+            <option ></option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Mangalore">Mangalore</option>
+            <option value="Hubli">Hubli</option>
+            <option value="Kolkotta">Kolkotta</option>
+            <option value="Pune">Pune</option>
+            <option value="Hydrabad">Hydrabad</option>
+            <option value="Belgavi">Belgavi</option>
+        </select>
+        <button type="search">Search</button>c
+    </form>
+    
+    <div id="map"></div>
+    <section id="about">
+        <h2 style="margin-left: 10px;">About This Project</h2>
+        <div class="para">
+        <p>
+            ➢ Our project aims to enhance healthcare accessibility by helping patients easily find the right medical professionals and essential medicines. 
+            Users can select their city, input symptoms, and choose hospitals to check for doctor availability and directions. 
+            This tool ensures timely treatment, especially during emergencies.
+        </p>
+        <p>
+            ➢ The platform leverages advanced technologies like the Google Maps API and the Google Places Library to provide real-time location data and map services. 
+            By integrating these tools, users can get precise directions and find nearby hospitals quickly. The intuitive interface is designed to be user-friendly, making it easy for anyone to navigate through the site and find the necessary information.
+        </p>
+        <p>
+            ➢ In addition to displaying maps and locations, our project also incorporates a feature to check the availability of doctors based on the users' symptoms. 
+            This is done through integration with healthcare databases, providing up-to-date information on medical professionals' schedules. 
+            This feature aims to reduce the waiting time and ensure that patients receive timely care.
+        </p>
+        <p>
+            ➢ We believe that access to healthcare is a fundamental right, and this project is a step toward making healthcare more accessible and efficient. 
+            By using this platform, patients can make informed decisions quickly, potentially saving lives during critical moments. We hope this tool serves as a valuable resource for communities, especially in regions where healthcare access might be limited.
+        </p>
+    </div>
+    </section>
+    {{>footer}}
+    <script src="js/script.js"></script>
+</body>
+</html>

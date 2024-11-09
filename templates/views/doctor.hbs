@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Availability</title>
+    <link rel="stylesheet" href="css/doco.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAESdDcmSlREW9-ANJwYj-1LdGAnM81Dnw&libraries=places"></script>
+</head>
+<body>
+    <h1>Check Doctor Availability</h1>
+    <form id="cityForm" >
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" autocomplete="off" required>
+        
+        <label for="symptom">Symptom:</label>
+        <input type="text" id="symptom" name="symptom" autocomplete="off" required>
+        
+        <label for="hospital">Select Hospital:</label>
+        <select id="hospital" name="hospital" autocomplete="off" required>
+            <option value="" disabled selected hidden>Select a hospital</option>
+            <option value="AIIms">Aiims</option>
+            <option value="KS hegde">KS hegde</option>
+            <option value="KLE">KLE</option>
+        </select>
+        
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+    <button id="btn" style="display: none;max-width: 160px;margin: auto; background-color: rgb(213, 126, 126);" onclick="openAppoint()">Fill the form</button>
+     <div id="map"></div>
+     {{>footer}}
+    <script src="js/doco.js"></script>
+</body>
+</html>
